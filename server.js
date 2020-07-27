@@ -54,10 +54,12 @@ console.clear();
 const server = net
   .createServer((socket) => {
     userCounter++;
-    currentClient = new Client('', idGenerator(), socket);
+    currentClient = new Client(`Guest`, idGenerator(), socket);
+    currentClient.name = `Guest${id /10000}`
     connectedUsers.push(currentClient);
     getOtherUsers(currentClient);
-      console.log(`User ${currentClient.name} connected`); 
+      console.log(`User ${currentClient.name} connected`);
+      currentClient.socket.write('Welcome to the server!') 
       serverLog.write(`User ${currentClient.name} connected ${new Date().toISOString()}\n`)
     socket.on("data", (data) => {
       checkForCommand(data.toString().trim());
