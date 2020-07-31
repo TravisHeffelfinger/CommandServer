@@ -1,0 +1,24 @@
+{
+  "name": "CommandServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TravisHeffelfinger/CommandServer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TravisHeffelfinger/CommandServer/issues"
+  },
+  "homepage": "https://github.com/TravisHeffelfinger/CommandServer#readme",
+  "dependencies": {
+    "uuid": "^8.3.0"
+  }
+}
